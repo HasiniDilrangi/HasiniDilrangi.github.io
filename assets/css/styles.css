@@ -328,24 +328,41 @@ img {
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
 .work__container {
-  row-gap: 2rem;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  row-gap: 2rem; /* Space between rows */
+  column-gap: 2rem; 
+  flex-wrap: wrap; 
+  padding: 1rem; /* Add some padding */
 }
 
 .work__img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: .5rem;
   overflow: hidden;
+  transition: transform 1s; /* Smooth scaling animation */
 }
 
 .work__img img {
-  transition: 1s;
+  width: 80%; /* Make image responsive */
+  height: auto; /* Preserve aspect ratio */
+  display: block; /* Ensure no inline spacing issues */
 }
 
 .work__img img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Zoom effect */
 }
+
+/* Optional: Center the text and overlay */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 
 /* ===== CONTACT =====*/
 .contact__input {
